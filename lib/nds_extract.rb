@@ -73,6 +73,19 @@ end
 
 def movies_with_directors_set(source)
   
+  new_array=[]
+  i = 0
+  
+  while i < source.length do
+    
+    name_key = source[i][:name]
+    movie_value = source[i][:movies]
+    new_array << movies_with_director_key(name_key, movie_value)
+    
+    i+=1
+  end
+  
+  new_array
 end
 
 def studios_totals(nds)
