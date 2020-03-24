@@ -51,6 +51,23 @@ end
 
 def gross_per_studio(collection)
   
+  new_hash = {}
+  i = 0
+  
+  while i < collection.length do
+    
+    movie_gross = collection[i][:worldwide_gross]
+    studio_name = collection[i][:studio]
+    
+    if new_hash.has_key?(studio_name)
+      new_hash[studio_name] += movie_gross
+    else
+      new_hash[studio_name] = movie_gross
+    end
+      
+    i += 1
+  end
+  new_hash
 end
 
 def movies_with_directors_set(source)
