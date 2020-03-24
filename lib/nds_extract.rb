@@ -67,6 +67,7 @@ def gross_per_studio(collection)
       
     i += 1
   end
+  
   new_hash
 end
 
